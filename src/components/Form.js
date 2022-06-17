@@ -1,17 +1,34 @@
+import React, { useState } from 'react';
+
 import Classes from './Form.module.css';
 import Btn from './Btn';
 
-const Form = () => {
+const Form = ({ type, inputValue, setValue }) => {
 	return (
 		<>
 			<div className={Classes.formContainer}>
-				<h2>add contacts</h2>
 				<form className={Classes.form}>
-					<label htmlFor=''>name</label>
-					<input type='text' name='' id='' />
-					<label htmlFor=''>email</label>
-					<input type='email' name='' id='' />
-					<Btn name='Add' color='#120c33' />
+					{type.map((type) => {
+						return (
+							<>
+								<label>{type}</label>
+								<input
+									type={type === 'phone' ? 'number' : type}
+									name={type === 'phone' ? 'number' : type}
+									value={inputValue.type}
+									onChange={(e) => {
+										return type === 'email'
+											? setValue.setEmailValue(e.target.value)
+											: type === 'password'
+											? setValue.setPasswordValue(e.target.value)
+											: type === 'phone'
+											? setValue.setPhoneValue(e.target.value)
+											: '';
+									}}
+								/>
+							</>
+						);
+					})}
 				</form>
 			</div>
 		</>

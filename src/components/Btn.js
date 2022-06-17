@@ -3,7 +3,10 @@ const Btn = ({ name, color, clickHandler }) => {
 		<>
 			<button
 				type='button'
-				onClick={clickHandler}
+				onClick={(e) => {
+					e.preventDefault();
+					clickHandler();
+				}}
 				style={{
 					width: '100px',
 					height: '50px',
