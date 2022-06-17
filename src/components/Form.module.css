@@ -1,0 +1,21 @@
+@media (max-width: 800px) {
+	.formContainer {
+		width: 80%;
+	}
+	.form {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.form input {
+		height: 30px;
+	}
+	.form label {
+		color: #120c33;
+		font-size: 1.5rem;
+	}
+	.form button {
+		margin: auto;
+		margin-top: 1rem;
+	}
+}
