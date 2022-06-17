@@ -1,7 +1,7 @@
 function App() {
 	return (
 		<div className='App'>
-			<h1>hello from app</h1>
+			<h1>hello from broadcast apps</h1>
 		</div>
 	);
 }
