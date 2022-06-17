@@ -14,7 +14,7 @@ const Form = ({ type, inputValue, setValue }) => {
 								<label>{type}</label>
 								<input
 									type={type === 'phone' ? 'number' : type}
-									name={type === 'phone' ? 'number' : type}
+									name={type}
 									value={inputValue.type}
 									onChange={(e) => {
 										return type === 'email'
